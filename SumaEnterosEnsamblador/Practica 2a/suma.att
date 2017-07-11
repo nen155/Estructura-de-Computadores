@@ -1,0 +1,45 @@
+
+suma:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .plt:
+
+080481d0 <printf@plt-0x10>:
+ 80481d0:	ff 35 04 a0 04 08    	pushl  0x804a004
+ 80481d6:	ff 25 08 a0 04 08    	jmp    *0x804a008
+ 80481dc:	00 00                	add    %al,(%eax)
+	...
+
+080481e0 <printf@plt>:
+ 80481e0:	ff 25 0c a0 04 08    	jmp    *0x804a00c
+ 80481e6:	68 00 00 00 00       	push   $0x0
+ 80481eb:	e9 e0 ff ff ff       	jmp    80481d0 <printf@plt-0x10>
+
+Desensamblado de la sección .text:
+
+080481f0 <_start>:
+ 80481f0:	bb 10 a0 04 08       	mov    $0x804a010,%ebx
+ 80481f5:	8b 0d 34 a0 04 08    	mov    0x804a034,%ecx
+ 80481fb:	e8 2a 00 00 00       	call   804822a <suma>
+ 8048200:	a3 38 a0 04 08       	mov    %eax,0x804a038
+ 8048205:	ff 35 38 a0 04 08    	pushl  0x804a038
+ 804820b:	ff 35 38 a0 04 08    	pushl  0x804a038
+ 8048211:	68 3c a0 04 08       	push   $0x804a03c
+ 8048216:	e8 c5 ff ff ff       	call   80481e0 <printf@plt>
+ 804821b:	83 c4 0c             	add    $0xc,%esp
+ 804821e:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8048223:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 8048228:	cd 80                	int    $0x80
+
+0804822a <suma>:
+ 804822a:	52                   	push   %edx
+ 804822b:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048230:	ba 00 00 00 00       	mov    $0x0,%edx
+
+08048235 <bucle>:
+ 8048235:	03 04 93             	add    (%ebx,%edx,4),%eax
+ 8048238:	42                   	inc    %edx
+ 8048239:	39 d1                	cmp    %edx,%ecx
+ 804823b:	75 f8                	jne    8048235 <bucle>
+ 804823d:	5a                   	pop    %edx
+ 804823e:	c3                   	ret    

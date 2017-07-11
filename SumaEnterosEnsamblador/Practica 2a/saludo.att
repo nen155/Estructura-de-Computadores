@@ -1,0 +1,15 @@
+
+saludo:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+0804816f <_start>:
+ 804816f:	b8 04 00 00 00       	mov    $0x4,%eax
+ 8048174:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 8048179:	b9 00 a0 04 08       	mov    $0x804a000,%ecx
+ 804817e:	8b 15 1d a0 04 08    	mov    0x804a01d,%edx
+ 8048184:	cd 80                	int    $0x80
+ 8048186:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804818b:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 8048190:	cd 80                	int    $0x80

@@ -1,0 +1,525 @@
+
+bombaca_Julian_Torices_Hernandez:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .init:
+
+08048664 <_init>:
+ 8048664:	53                   	push   %ebx
+ 8048665:	83 ec 08             	sub    $0x8,%esp
+ 8048668:	e8 53 01 00 00       	call   80487c0 <__x86.get_pc_thunk.bx>
+ 804866d:	81 c3 93 19 00 00    	add    $0x1993,%ebx
+ 8048673:	8b 83 fc ff ff ff    	mov    -0x4(%ebx),%eax
+ 8048679:	85 c0                	test   %eax,%eax
+ 804867b:	74 05                	je     8048682 <_init+0x1e>
+ 804867d:	e8 2e 00 00 00       	call   80486b0 <__gmon_start__@plt>
+ 8048682:	83 c4 08             	add    $0x8,%esp
+ 8048685:	5b                   	pop    %ebx
+ 8048686:	c3                   	ret    
+
+Desensamblado de la sección .plt:
+
+08048690 <__cxa_atexit@plt-0x10>:
+ 8048690:	ff 35 04 a0 04 08    	pushl  0x804a004
+ 8048696:	ff 25 08 a0 04 08    	jmp    *0x804a008
+ 804869c:	00 00                	add    %al,(%eax)
+	...
+
+080486a0 <__cxa_atexit@plt>:
+ 80486a0:	ff 25 0c a0 04 08    	jmp    *0x804a00c
+ 80486a6:	68 00 00 00 00       	push   $0x0
+ 80486ab:	e9 e0 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+080486b0 <__gmon_start__@plt>:
+ 80486b0:	ff 25 10 a0 04 08    	jmp    *0x804a010
+ 80486b6:	68 08 00 00 00       	push   $0x8
+ 80486bb:	e9 d0 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+080486c0 <_ZNSt8ios_base4InitC1Ev@plt>:
+ 80486c0:	ff 25 14 a0 04 08    	jmp    *0x804a014
+ 80486c6:	68 10 00 00 00       	push   $0x10
+ 80486cb:	e9 c0 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+080486d0 <__libc_start_main@plt>:
+ 80486d0:	ff 25 18 a0 04 08    	jmp    *0x804a018
+ 80486d6:	68 18 00 00 00       	push   $0x18
+ 80486db:	e9 b0 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+080486e0 <_ZNSt8ios_base4InitD1Ev@plt>:
+ 80486e0:	ff 25 1c a0 04 08    	jmp    *0x804a01c
+ 80486e6:	68 20 00 00 00       	push   $0x20
+ 80486eb:	e9 a0 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+080486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+ 80486f0:	ff 25 20 a0 04 08    	jmp    *0x804a020
+ 80486f6:	68 28 00 00 00       	push   $0x28
+ 80486fb:	e9 90 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048700 <gettimeofday@plt>:
+ 8048700:	ff 25 24 a0 04 08    	jmp    *0x804a024
+ 8048706:	68 30 00 00 00       	push   $0x30
+ 804870b:	e9 80 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048710 <strlen@plt>:
+ 8048710:	ff 25 28 a0 04 08    	jmp    *0x804a028
+ 8048716:	68 38 00 00 00       	push   $0x38
+ 804871b:	e9 70 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048720 <_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_@plt>:
+ 8048720:	ff 25 2c a0 04 08    	jmp    *0x804a02c
+ 8048726:	68 40 00 00 00       	push   $0x40
+ 804872b:	e9 60 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048730 <__stack_chk_fail@plt>:
+ 8048730:	ff 25 30 a0 04 08    	jmp    *0x804a030
+ 8048736:	68 48 00 00 00       	push   $0x48
+ 804873b:	e9 50 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048740 <_ZNSirsERi@plt>:
+ 8048740:	ff 25 34 a0 04 08    	jmp    *0x804a034
+ 8048746:	68 50 00 00 00       	push   $0x50
+ 804874b:	e9 40 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048750 <_ZNSolsEPFRSoS_E@plt>:
+ 8048750:	ff 25 38 a0 04 08    	jmp    *0x804a038
+ 8048756:	68 58 00 00 00       	push   $0x58
+ 804875b:	e9 30 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048760 <strncmp@plt>:
+ 8048760:	ff 25 3c a0 04 08    	jmp    *0x804a03c
+ 8048766:	68 60 00 00 00       	push   $0x60
+ 804876b:	e9 20 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048770 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@plt>:
+ 8048770:	ff 25 40 a0 04 08    	jmp    *0x804a040
+ 8048776:	68 68 00 00 00       	push   $0x68
+ 804877b:	e9 10 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+08048780 <exit@plt>:
+ 8048780:	ff 25 44 a0 04 08    	jmp    *0x804a044
+ 8048786:	68 70 00 00 00       	push   $0x70
+ 804878b:	e9 00 ff ff ff       	jmp    8048690 <_init+0x2c>
+
+Desensamblado de la sección .text:
+
+08048790 <_start>:
+ 8048790:	31 ed                	xor    %ebp,%ebp
+ 8048792:	5e                   	pop    %esi
+ 8048793:	89 e1                	mov    %esp,%ecx
+ 8048795:	83 e4 f0             	and    $0xfffffff0,%esp
+ 8048798:	50                   	push   %eax
+ 8048799:	54                   	push   %esp
+ 804879a:	52                   	push   %edx
+ 804879b:	68 b0 8c 04 08       	push   $0x8048cb0
+ 80487a0:	68 40 8c 04 08       	push   $0x8048c40
+ 80487a5:	51                   	push   %ecx
+ 80487a6:	56                   	push   %esi
+ 80487a7:	68 ef 89 04 08       	push   $0x80489ef
+ 80487ac:	e8 1f ff ff ff       	call   80486d0 <__libc_start_main@plt>
+ 80487b1:	f4                   	hlt    
+ 80487b2:	66 90                	xchg   %ax,%ax
+ 80487b4:	66 90                	xchg   %ax,%ax
+ 80487b6:	66 90                	xchg   %ax,%ax
+ 80487b8:	66 90                	xchg   %ax,%ax
+ 80487ba:	66 90                	xchg   %ax,%ax
+ 80487bc:	66 90                	xchg   %ax,%ax
+ 80487be:	66 90                	xchg   %ax,%ax
+
+080487c0 <__x86.get_pc_thunk.bx>:
+ 80487c0:	8b 1c 24             	mov    (%esp),%ebx
+ 80487c3:	c3                   	ret    
+ 80487c4:	66 90                	xchg   %ax,%ax
+ 80487c6:	66 90                	xchg   %ax,%ax
+ 80487c8:	66 90                	xchg   %ax,%ax
+ 80487ca:	66 90                	xchg   %ax,%ax
+ 80487cc:	66 90                	xchg   %ax,%ax
+ 80487ce:	66 90                	xchg   %ax,%ax
+
+080487d0 <deregister_tm_clones>:
+ 80487d0:	b8 53 a0 04 08       	mov    $0x804a053,%eax
+ 80487d5:	2d 50 a0 04 08       	sub    $0x804a050,%eax
+ 80487da:	83 f8 06             	cmp    $0x6,%eax
+ 80487dd:	77 01                	ja     80487e0 <deregister_tm_clones+0x10>
+ 80487df:	c3                   	ret    
+ 80487e0:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80487e5:	85 c0                	test   %eax,%eax
+ 80487e7:	74 f6                	je     80487df <deregister_tm_clones+0xf>
+ 80487e9:	55                   	push   %ebp
+ 80487ea:	89 e5                	mov    %esp,%ebp
+ 80487ec:	83 ec 18             	sub    $0x18,%esp
+ 80487ef:	c7 04 24 50 a0 04 08 	movl   $0x804a050,(%esp)
+ 80487f6:	ff d0                	call   *%eax
+ 80487f8:	c9                   	leave  
+ 80487f9:	c3                   	ret    
+ 80487fa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+08048800 <register_tm_clones>:
+ 8048800:	b8 50 a0 04 08       	mov    $0x804a050,%eax
+ 8048805:	2d 50 a0 04 08       	sub    $0x804a050,%eax
+ 804880a:	c1 f8 02             	sar    $0x2,%eax
+ 804880d:	89 c2                	mov    %eax,%edx
+ 804880f:	c1 ea 1f             	shr    $0x1f,%edx
+ 8048812:	01 d0                	add    %edx,%eax
+ 8048814:	d1 f8                	sar    %eax
+ 8048816:	75 01                	jne    8048819 <register_tm_clones+0x19>
+ 8048818:	c3                   	ret    
+ 8048819:	ba 00 00 00 00       	mov    $0x0,%edx
+ 804881e:	85 d2                	test   %edx,%edx
+ 8048820:	74 f6                	je     8048818 <register_tm_clones+0x18>
+ 8048822:	55                   	push   %ebp
+ 8048823:	89 e5                	mov    %esp,%ebp
+ 8048825:	83 ec 18             	sub    $0x18,%esp
+ 8048828:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804882c:	c7 04 24 50 a0 04 08 	movl   $0x804a050,(%esp)
+ 8048833:	ff d2                	call   *%edx
+ 8048835:	c9                   	leave  
+ 8048836:	c3                   	ret    
+ 8048837:	89 f6                	mov    %esi,%esi
+ 8048839:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+08048840 <__do_global_dtors_aux>:
+ 8048840:	80 3d 8c a1 04 08 00 	cmpb   $0x0,0x804a18c
+ 8048847:	75 13                	jne    804885c <__do_global_dtors_aux+0x1c>
+ 8048849:	55                   	push   %ebp
+ 804884a:	89 e5                	mov    %esp,%ebp
+ 804884c:	83 ec 08             	sub    $0x8,%esp
+ 804884f:	e8 7c ff ff ff       	call   80487d0 <deregister_tm_clones>
+ 8048854:	c6 05 8c a1 04 08 01 	movb   $0x1,0x804a18c
+ 804885b:	c9                   	leave  
+ 804885c:	f3 c3                	repz ret 
+ 804885e:	66 90                	xchg   %ax,%ax
+
+08048860 <frame_dummy>:
+ 8048860:	a1 08 9f 04 08       	mov    0x8049f08,%eax
+ 8048865:	85 c0                	test   %eax,%eax
+ 8048867:	74 1f                	je     8048888 <frame_dummy+0x28>
+ 8048869:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804886e:	85 c0                	test   %eax,%eax
+ 8048870:	74 16                	je     8048888 <frame_dummy+0x28>
+ 8048872:	55                   	push   %ebp
+ 8048873:	89 e5                	mov    %esp,%ebp
+ 8048875:	83 ec 18             	sub    $0x18,%esp
+ 8048878:	c7 04 24 08 9f 04 08 	movl   $0x8049f08,(%esp)
+ 804887f:	ff d0                	call   *%eax
+ 8048881:	c9                   	leave  
+ 8048882:	e9 79 ff ff ff       	jmp    8048800 <register_tm_clones>
+ 8048887:	90                   	nop
+ 8048888:	e9 73 ff ff ff       	jmp    8048800 <register_tm_clones>
+
+0804888d <_Z3jajv>:
+ 804888d:	55                   	push   %ebp
+ 804888e:	89 e5                	mov    %esp,%ebp
+ 8048890:	83 ec 18             	sub    $0x18,%esp
+ 8048893:	c7 44 24 04 d0 8c 04 	movl   $0x8048cd0,0x4(%esp)
+ 804889a:	08 
+ 804889b:	c7 04 24 00 a1 04 08 	movl   $0x804a100,(%esp)
+ 80488a2:	e8 49 fe ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80488a7:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 80488ae:	08 
+ 80488af:	89 04 24             	mov    %eax,(%esp)
+ 80488b2:	e8 99 fe ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80488b7:	c7 44 24 04 e0 8c 04 	movl   $0x8048ce0,0x4(%esp)
+ 80488be:	08 
+ 80488bf:	89 04 24             	mov    %eax,(%esp)
+ 80488c2:	e8 29 fe ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80488c7:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 80488ce:	08 
+ 80488cf:	89 04 24             	mov    %eax,(%esp)
+ 80488d2:	e8 79 fe ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80488d7:	c7 44 24 04 d0 8c 04 	movl   $0x8048cd0,0x4(%esp)
+ 80488de:	08 
+ 80488df:	89 04 24             	mov    %eax,(%esp)
+ 80488e2:	e8 09 fe ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80488e7:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 80488ee:	08 
+ 80488ef:	89 04 24             	mov    %eax,(%esp)
+ 80488f2:	e8 59 fe ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80488f7:	c7 04 24 ff ff ff ff 	movl   $0xffffffff,(%esp)
+ 80488fe:	e8 7d fe ff ff       	call   8048780 <exit@plt>
+
+08048903 <_Z3jojv>:
+ 8048903:	55                   	push   %ebp
+ 8048904:	89 e5                	mov    %esp,%ebp
+ 8048906:	83 ec 18             	sub    $0x18,%esp
+ 8048909:	c7 44 24 04 d0 8c 04 	movl   $0x8048cd0,0x4(%esp)
+ 8048910:	08 
+ 8048911:	c7 04 24 00 a1 04 08 	movl   $0x804a100,(%esp)
+ 8048918:	e8 d3 fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 804891d:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 8048924:	08 
+ 8048925:	89 04 24             	mov    %eax,(%esp)
+ 8048928:	e8 23 fe ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 804892d:	c7 44 24 04 f0 8c 04 	movl   $0x8048cf0,0x4(%esp)
+ 8048934:	08 
+ 8048935:	89 04 24             	mov    %eax,(%esp)
+ 8048938:	e8 b3 fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 804893d:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 8048944:	08 
+ 8048945:	89 04 24             	mov    %eax,(%esp)
+ 8048948:	e8 03 fe ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 804894d:	c7 44 24 04 d0 8c 04 	movl   $0x8048cd0,0x4(%esp)
+ 8048954:	08 
+ 8048955:	89 04 24             	mov    %eax,(%esp)
+ 8048958:	e8 93 fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 804895d:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 8048964:	08 
+ 8048965:	89 04 24             	mov    %eax,(%esp)
+ 8048968:	e8 e3 fd ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 804896d:	c7 04 24 ff ff ff ff 	movl   $0xffffffff,(%esp)
+ 8048974:	e8 07 fe ff ff       	call   8048780 <exit@plt>
+
+08048979 <_Z3jejv>:
+ 8048979:	55                   	push   %ebp
+ 804897a:	89 e5                	mov    %esp,%ebp
+ 804897c:	83 ec 18             	sub    $0x18,%esp
+ 804897f:	c7 44 24 04 00 8d 04 	movl   $0x8048d00,0x4(%esp)
+ 8048986:	08 
+ 8048987:	c7 04 24 00 a1 04 08 	movl   $0x804a100,(%esp)
+ 804898e:	e8 5d fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 8048993:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 804899a:	08 
+ 804899b:	89 04 24             	mov    %eax,(%esp)
+ 804899e:	e8 ad fd ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80489a3:	c7 44 24 04 10 8d 04 	movl   $0x8048d10,0x4(%esp)
+ 80489aa:	08 
+ 80489ab:	89 04 24             	mov    %eax,(%esp)
+ 80489ae:	e8 3d fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80489b3:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 80489ba:	08 
+ 80489bb:	89 04 24             	mov    %eax,(%esp)
+ 80489be:	e8 8d fd ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80489c3:	c7 44 24 04 00 8d 04 	movl   $0x8048d00,0x4(%esp)
+ 80489ca:	08 
+ 80489cb:	89 04 24             	mov    %eax,(%esp)
+ 80489ce:	e8 1d fd ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80489d3:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 80489da:	08 
+ 80489db:	89 04 24             	mov    %eax,(%esp)
+ 80489de:	e8 6d fd ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 80489e3:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 80489ea:	e8 91 fd ff ff       	call   8048780 <exit@plt>
+
+080489ef <main>:
+ 80489ef:	55                   	push   %ebp
+ 80489f0:	89 e5                	mov    %esp,%ebp
+ 80489f2:	57                   	push   %edi
+ 80489f3:	56                   	push   %esi
+ 80489f4:	53                   	push   %ebx
+ 80489f5:	83 e4 f0             	and    $0xfffffff0,%esp
+ 80489f8:	81 ec 00 01 00 00    	sub    $0x100,%esp
+ 80489fe:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 8048a04:	89 84 24 fc 00 00 00 	mov    %eax,0xfc(%esp)
+ 8048a0b:	31 c0                	xor    %eax,%eax
+ 8048a0d:	c7 44 24 34 70 69 72 	movl   $0x61726970,0x34(%esp)
+ 8048a14:	61 
+ 8048a15:	c7 44 24 38 74 61 00 	movl   $0x6174,0x38(%esp)
+ 8048a1c:	00 
+ 8048a1d:	8d 5c 24 3c          	lea    0x3c(%esp),%ebx
+ 8048a21:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048a26:	ba 17 00 00 00       	mov    $0x17,%edx
+ 8048a2b:	89 df                	mov    %ebx,%edi
+ 8048a2d:	89 d1                	mov    %edx,%ecx
+ 8048a2f:	f3 ab                	rep stos %eax,%es:(%edi)
+ 8048a31:	c7 84 24 98 00 00 00 	movl   $0x61737567,0x98(%esp)
+ 8048a38:	67 75 73 61 
+ 8048a3c:	c7 84 24 9c 00 00 00 	movl   $0x6f63696e,0x9c(%esp)
+ 8048a43:	6e 69 63 6f 
+ 8048a47:	c7 84 24 a0 00 00 00 	movl   $0x0,0xa0(%esp)
+ 8048a4e:	00 00 00 00 
+ 8048a52:	8d 9c 24 a4 00 00 00 	lea    0xa4(%esp),%ebx
+ 8048a59:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048a5e:	ba 16 00 00 00       	mov    $0x16,%edx
+ 8048a63:	89 df                	mov    %ebx,%edi
+ 8048a65:	89 d1                	mov    %edx,%ecx
+ 8048a67:	f3 ab                	rep stos %eax,%es:(%edi)
+ 8048a69:	c7 44 24 1c 0e 00 00 	movl   $0xe,0x1c(%esp)
+ 8048a70:	00 
+ 8048a71:	c7 44 24 18 09 00 00 	movl   $0x9,0x18(%esp)
+ 8048a78:	00 
+ 8048a79:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048a80:	00 
+ 8048a81:	8d 44 24 24          	lea    0x24(%esp),%eax
+ 8048a85:	89 04 24             	mov    %eax,(%esp)
+ 8048a88:	e8 73 fc ff ff       	call   8048700 <gettimeofday@plt>
+ 8048a8d:	c7 44 24 04 20 8d 04 	movl   $0x8048d20,0x4(%esp)
+ 8048a94:	08 
+ 8048a95:	c7 04 24 00 a1 04 08 	movl   $0x804a100,(%esp)
+ 8048a9c:	e8 4f fc ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 8048aa1:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 8048aa8:	08 
+ 8048aa9:	89 04 24             	mov    %eax,(%esp)
+ 8048aac:	e8 9f fc ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 8048ab1:	8d 44 24 34          	lea    0x34(%esp),%eax
+ 8048ab5:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048ab9:	c7 04 24 60 a0 04 08 	movl   $0x804a060,(%esp)
+ 8048ac0:	e8 5b fc ff ff       	call   8048720 <_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_@plt>
+ 8048ac5:	8d 44 24 34          	lea    0x34(%esp),%eax
+ 8048ac9:	89 04 24             	mov    %eax,(%esp)
+ 8048acc:	e8 3f fc ff ff       	call   8048710 <strlen@plt>
+ 8048ad1:	89 44 24 20          	mov    %eax,0x20(%esp)
+ 8048ad5:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048adc:	00 
+ 8048add:	8d 44 24 2c          	lea    0x2c(%esp),%eax
+ 8048ae1:	89 04 24             	mov    %eax,(%esp)
+ 8048ae4:	e8 17 fc ff ff       	call   8048700 <gettimeofday@plt>
+ 8048ae9:	8d 84 24 98 00 00 00 	lea    0x98(%esp),%eax
+ 8048af0:	89 04 24             	mov    %eax,(%esp)
+ 8048af3:	e8 18 fc ff ff       	call   8048710 <strlen@plt>
+ 8048af8:	3b 44 24 20          	cmp    0x20(%esp),%eax
+ 8048afc:	74 05                	je     8048b03 <main+0x114>
+ 8048afe:	e8 8a fd ff ff       	call   804888d <_Z3jajv>
+ 8048b03:	8b 44 24 20          	mov    0x20(%esp),%eax
+ 8048b07:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8048b0b:	8d 84 24 98 00 00 00 	lea    0x98(%esp),%eax
+ 8048b12:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048b16:	8d 44 24 34          	lea    0x34(%esp),%eax
+ 8048b1a:	89 04 24             	mov    %eax,(%esp)
+ 8048b1d:	e8 3e fc ff ff       	call   8048760 <strncmp@plt>
+ 8048b22:	85 c0                	test   %eax,%eax
+ 8048b24:	74 05                	je     8048b2b <main+0x13c>
+ 8048b26:	e8 62 fd ff ff       	call   804888d <_Z3jajv>
+ 8048b2b:	c7 44 24 04 38 8d 04 	movl   $0x8048d38,0x4(%esp)
+ 8048b32:	08 
+ 8048b33:	c7 04 24 00 a1 04 08 	movl   $0x804a100,(%esp)
+ 8048b3a:	e8 b1 fb ff ff       	call   80486f0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 8048b3f:	c7 44 24 04 70 87 04 	movl   $0x8048770,0x4(%esp)
+ 8048b46:	08 
+ 8048b47:	89 04 24             	mov    %eax,(%esp)
+ 8048b4a:	e8 01 fc ff ff       	call   8048750 <_ZNSolsEPFRSoS_E@plt>
+ 8048b4f:	8d 44 24 18          	lea    0x18(%esp),%eax
+ 8048b53:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048b57:	c7 04 24 60 a0 04 08 	movl   $0x804a060,(%esp)
+ 8048b5e:	e8 dd fb ff ff       	call   8048740 <_ZNSirsERi@plt>
+ 8048b63:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048b6a:	00 
+ 8048b6b:	8d 44 24 24          	lea    0x24(%esp),%eax
+ 8048b6f:	89 04 24             	mov    %eax,(%esp)
+ 8048b72:	e8 89 fb ff ff       	call   8048700 <gettimeofday@plt>
+ 8048b77:	8b 44 24 1c          	mov    0x1c(%esp),%eax
+ 8048b7b:	8d 50 01             	lea    0x1(%eax),%edx
+ 8048b7e:	8b 44 24 18          	mov    0x18(%esp),%eax
+ 8048b82:	39 c2                	cmp    %eax,%edx
+ 8048b84:	75 1d                	jne    8048ba3 <main+0x1b4>
+ 8048b86:	8b 54 24 24          	mov    0x24(%esp),%edx
+ 8048b8a:	8b 44 24 2c          	mov    0x2c(%esp),%eax
+ 8048b8e:	29 c2                	sub    %eax,%edx
+ 8048b90:	89 d0                	mov    %edx,%eax
+ 8048b92:	83 f8 08             	cmp    $0x8,%eax
+ 8048b95:	7e 05                	jle    8048b9c <main+0x1ad>
+ 8048b97:	e8 f1 fc ff ff       	call   804888d <_Z3jajv>
+ 8048b9c:	e8 d8 fd ff ff       	call   8048979 <_Z3jejv>
+ 8048ba1:	eb 05                	jmp    8048ba8 <main+0x1b9>
+ 8048ba3:	e8 5b fd ff ff       	call   8048903 <_Z3jojv>
+ 8048ba8:	8b 54 24 24          	mov    0x24(%esp),%edx
+ 8048bac:	8b 44 24 2c          	mov    0x2c(%esp),%eax
+ 8048bb0:	29 c2                	sub    %eax,%edx
+ 8048bb2:	89 d0                	mov    %edx,%eax
+ 8048bb4:	83 f8 08             	cmp    $0x8,%eax
+ 8048bb7:	7e 05                	jle    8048bbe <main+0x1cf>
+ 8048bb9:	e8 cf fc ff ff       	call   804888d <_Z3jajv>
+ 8048bbe:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048bc3:	8b b4 24 fc 00 00 00 	mov    0xfc(%esp),%esi
+ 8048bca:	65 33 35 14 00 00 00 	xor    %gs:0x14,%esi
+ 8048bd1:	74 05                	je     8048bd8 <main+0x1e9>
+ 8048bd3:	e8 58 fb ff ff       	call   8048730 <__stack_chk_fail@plt>
+ 8048bd8:	8d 65 f4             	lea    -0xc(%ebp),%esp
+ 8048bdb:	5b                   	pop    %ebx
+ 8048bdc:	5e                   	pop    %esi
+ 8048bdd:	5f                   	pop    %edi
+ 8048bde:	5d                   	pop    %ebp
+ 8048bdf:	c3                   	ret    
+
+08048be0 <_Z41__static_initialization_and_destruction_0ii>:
+ 8048be0:	55                   	push   %ebp
+ 8048be1:	89 e5                	mov    %esp,%ebp
+ 8048be3:	83 ec 18             	sub    $0x18,%esp
+ 8048be6:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 8048bea:	75 31                	jne    8048c1d <_Z41__static_initialization_and_destruction_0ii+0x3d>
+ 8048bec:	81 7d 0c ff ff 00 00 	cmpl   $0xffff,0xc(%ebp)
+ 8048bf3:	75 28                	jne    8048c1d <_Z41__static_initialization_and_destruction_0ii+0x3d>
+ 8048bf5:	c7 04 24 8d a1 04 08 	movl   $0x804a18d,(%esp)
+ 8048bfc:	e8 bf fa ff ff       	call   80486c0 <_ZNSt8ios_base4InitC1Ev@plt>
+ 8048c01:	c7 44 24 08 4c a0 04 	movl   $0x804a04c,0x8(%esp)
+ 8048c08:	08 
+ 8048c09:	c7 44 24 04 8d a1 04 	movl   $0x804a18d,0x4(%esp)
+ 8048c10:	08 
+ 8048c11:	c7 04 24 e0 86 04 08 	movl   $0x80486e0,(%esp)
+ 8048c18:	e8 83 fa ff ff       	call   80486a0 <__cxa_atexit@plt>
+ 8048c1d:	c9                   	leave  
+ 8048c1e:	c3                   	ret    
+
+08048c1f <_GLOBAL__sub_I__Z3jajv>:
+ 8048c1f:	55                   	push   %ebp
+ 8048c20:	89 e5                	mov    %esp,%ebp
+ 8048c22:	83 ec 18             	sub    $0x18,%esp
+ 8048c25:	c7 44 24 04 ff ff 00 	movl   $0xffff,0x4(%esp)
+ 8048c2c:	00 
+ 8048c2d:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8048c34:	e8 a7 ff ff ff       	call   8048be0 <_Z41__static_initialization_and_destruction_0ii>
+ 8048c39:	c9                   	leave  
+ 8048c3a:	c3                   	ret    
+ 8048c3b:	66 90                	xchg   %ax,%ax
+ 8048c3d:	66 90                	xchg   %ax,%ax
+ 8048c3f:	90                   	nop
+
+08048c40 <__libc_csu_init>:
+ 8048c40:	55                   	push   %ebp
+ 8048c41:	57                   	push   %edi
+ 8048c42:	31 ff                	xor    %edi,%edi
+ 8048c44:	56                   	push   %esi
+ 8048c45:	53                   	push   %ebx
+ 8048c46:	e8 75 fb ff ff       	call   80487c0 <__x86.get_pc_thunk.bx>
+ 8048c4b:	81 c3 b5 13 00 00    	add    $0x13b5,%ebx
+ 8048c51:	83 ec 1c             	sub    $0x1c,%esp
+ 8048c54:	8b 6c 24 30          	mov    0x30(%esp),%ebp
+ 8048c58:	8d b3 04 ff ff ff    	lea    -0xfc(%ebx),%esi
+ 8048c5e:	e8 01 fa ff ff       	call   8048664 <_init>
+ 8048c63:	8d 83 fc fe ff ff    	lea    -0x104(%ebx),%eax
+ 8048c69:	29 c6                	sub    %eax,%esi
+ 8048c6b:	c1 fe 02             	sar    $0x2,%esi
+ 8048c6e:	85 f6                	test   %esi,%esi
+ 8048c70:	74 27                	je     8048c99 <__libc_csu_init+0x59>
+ 8048c72:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+ 8048c78:	8b 44 24 38          	mov    0x38(%esp),%eax
+ 8048c7c:	89 2c 24             	mov    %ebp,(%esp)
+ 8048c7f:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8048c83:	8b 44 24 34          	mov    0x34(%esp),%eax
+ 8048c87:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048c8b:	ff 94 bb fc fe ff ff 	call   *-0x104(%ebx,%edi,4)
+ 8048c92:	83 c7 01             	add    $0x1,%edi
+ 8048c95:	39 f7                	cmp    %esi,%edi
+ 8048c97:	75 df                	jne    8048c78 <__libc_csu_init+0x38>
+ 8048c99:	83 c4 1c             	add    $0x1c,%esp
+ 8048c9c:	5b                   	pop    %ebx
+ 8048c9d:	5e                   	pop    %esi
+ 8048c9e:	5f                   	pop    %edi
+ 8048c9f:	5d                   	pop    %ebp
+ 8048ca0:	c3                   	ret    
+ 8048ca1:	eb 0d                	jmp    8048cb0 <__libc_csu_fini>
+ 8048ca3:	90                   	nop
+ 8048ca4:	90                   	nop
+ 8048ca5:	90                   	nop
+ 8048ca6:	90                   	nop
+ 8048ca7:	90                   	nop
+ 8048ca8:	90                   	nop
+ 8048ca9:	90                   	nop
+ 8048caa:	90                   	nop
+ 8048cab:	90                   	nop
+ 8048cac:	90                   	nop
+ 8048cad:	90                   	nop
+ 8048cae:	90                   	nop
+ 8048caf:	90                   	nop
+
+08048cb0 <__libc_csu_fini>:
+ 8048cb0:	f3 c3                	repz ret 
+
+Desensamblado de la sección .fini:
+
+08048cb4 <_fini>:
+ 8048cb4:	53                   	push   %ebx
+ 8048cb5:	83 ec 08             	sub    $0x8,%esp
+ 8048cb8:	e8 03 fb ff ff       	call   80487c0 <__x86.get_pc_thunk.bx>
+ 8048cbd:	81 c3 43 13 00 00    	add    $0x1343,%ebx
+ 8048cc3:	83 c4 08             	add    $0x8,%esp
+ 8048cc6:	5b                   	pop    %ebx
+ 8048cc7:	c3                   	ret    

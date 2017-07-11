@@ -1,0 +1,60 @@
+###############################################################################
+# Makefile
+###############################################################################
+
+SHELL = /bin/bash # for ubuntu
+
+###############################################################################
+
+SRC = $(wildcard *.c *.cc)
+EXE = $(basename $(SRC))
+ATT = $(EXE:=.att)
+DAT = $(EXE:=.dat)
+SVG = $(EXE:=.svg)
+
+###############################################################################
+
+CFLAGS = -fno-omit-frame-pointer -m32 -msse4.2 -O3 -Wall # -g3 -lrt
+CXXFLAGS = $(CFLAGS) -std=c++0x # -std=c++1y
+
+###############################################################################
+
+default: $(EXE)
+
+all: $(ATT) $(SVG)
+
+clean:
+	$(RM) -rfv $(ATT) $(EXE) $(SVG) core.* *.o *~ 
+
+svg: $(SVG)
+
+###############################################################################
+
+%.att: %
+	objdump -C -d $< > $@
+
+%.dat: %
+	./$< | tee $@
+
+%.svg: %.dat Makefile
+	gnuplot <<< "\
+		set terminal svg; \
+		set output '$@'; \
+		set key; \
+		set grid; \
+		set ylabel 'time (us)'; \
+		set y2label 'cpu cycles'; \
+		set xtics rotate; \
+		set ytics; \
+		set y2tics; \
+		set y2tics nomirror; \
+		plot '$<' u 5:xtic(1) w boxes axes x1y1 title 'time', \
+		     '$<' u 3:xtic(1) w lp axes x1y2 title 'cycles'"
+
+###############################################################################
+
+.PHONY: all clean deafault
+.PRECIOUS: $(DAT)
+
+###############################################################################
+

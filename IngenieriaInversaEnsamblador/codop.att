@@ -1,0 +1,21 @@
+
+codop:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+0804816f <_start>:
+ 804816f:	31 c0                	xor    %eax,%eax
+ 8048171:	90                   	nop
+ 8048172:	83 f0 01             	xor    $0x1,%eax
+ 8048175:	83 f3 00             	xor    $0x0,%ebx
+ 8048178:	cd 80                	int    $0x80
+ 804817a:	90                   	nop
+ 804817b:	eb fe                	jmp    804817b <_start+0xc>
+ 804817d:	90                   	nop
+ 804817e:	31 c0                	xor    %eax,%eax
+ 8048180:	90                   	nop
+ 8048181:	e8 00 00 00 00       	call   8048186 <empezar>
+
+08048186 <empezar>:
+ 8048186:	90                   	nop

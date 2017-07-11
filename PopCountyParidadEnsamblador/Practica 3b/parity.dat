@@ -1,0 +1,11 @@
+                          even      cycles    time(ns)   total(us)
+parity01(for_____)     1048576           7        2.88        3021
+parity02(while___)     1048576           7        2.88        3020
+parity03(while_v2)     1048576           7        2.88        3020
+parity04(asm_____)     1048576           7        2.88        3023
+parity05(tree____)     1048576           7        2.88        3020
+parity06(tree_v2_)     1048576           7        2.88        3019
+parity07(asm_v2__)     1048576           7        2.88        3021
+parity08(lt8_____)     1048576           7        2.88        3020
+parity09(lt16____)     1048576           7        2.88        3019
+parity10(HD______)     1048576           7        2.88        3019
